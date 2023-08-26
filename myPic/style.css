@@ -1,0 +1,14 @@
+div {
+  max-height: 100%;
+  max-width: 100%;
+  width: 300px;
+  height: 150px;
+  margin-bottom: 30px;
+  background-size: cover;
+  background-color: #cdcdcd;
+  border: 2px solid #cdcdcd;
+  background-image: url(/myPic/images/23528.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
