@@ -3,13 +3,18 @@ const User = require("../models/User");
 
 //REGISTER
 router.post("/register", async (req, res) => {
-  const newuser = new User({
+  const newUser = new User({
     username: req.body.username,
     email: req.body.email,
     username: req.body.username,
   });
-  await user.save();
-  res.send("Ok");
+
+  try {
+    const savedUser = await newUser.save();
+    res.status(201).json(savedUser);
+  } catch (err) {
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
